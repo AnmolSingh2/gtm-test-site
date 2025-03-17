@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMNW5LDJ');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – D-MediaX</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMNW5LDJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Minimal Contact Page -->
+  <section class="contact-section">
+    <h2>Let's Scale Your Business</h2>
+    <p>We typically respond within 24 hours.</p>
+
+    <form id="contactForm" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Show a temporary message to the user
+  let button = document.querySelector("button[type='submit']");
+  button.innerText = "Sending...";
+  button.disabled = true;
+
+  var formData = {
+    name: document.querySelector("input[name='name']").value,
+    email: document.querySelector("input[name='email']").value,
+    message: document.querySelector("textarea[name='message']").value
+  };
+
+  fetch("https://formspree.io/f/mzzepnpg", {  // Your Formspree endpoint
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = "thank-you.html"; // Redirect to Thank You page
+    } else {
+      alert("Something went wrong. Please try again.");
+      button.innerText = "Send Message";
+      button.disabled = false;
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("An error occurred. Please try again.");
+    button.innerText = "Send Message";
+    button.disabled = false;
+  });
+});
+</script>
+
+
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> dhaliwalmediax@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9463430364</p>
+    </div>
+  </section>
+
+</body>
+</html>
