@@ -250,17 +250,24 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar a {
+  .navbar {
+    flex-wrap: wrap; /* Prevents stacking */
     padding: 10px;
-    display: block;
-    width: 100%; /* Ensure full-width links */
   }
+  
+  .navbar ul {
+    display: flex;
+    flex-wrap: nowrap; /* Keeps it inline */
+    justify-content: center;
+    gap: 10px; /* Adjust spacing */
+  }
+  
+  .navbar a {
+    font-size: 14px; /* Reduce text size */
+    padding: 5px 10px; /* Adjust padding */
+  }
+}
+
   .call-button {
     margin-top: 10px; /* Prevent overlap */
   }
