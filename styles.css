@@ -250,6 +250,26 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    padding: 10px;
+    display: block;
+    width: 100%; /* Ensure full-width links */
+  }
+  .call-button {
+    margin-top: 10px; /* Prevent overlap */
+  }
+.hero-content h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+ .hero-content p {
+    font-size: 1rem;
+  }
   .hero {
     flex-direction: column;
   }
