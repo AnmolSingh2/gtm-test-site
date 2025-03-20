@@ -19,7 +19,7 @@ body {
   padding: 20px;
 }
 .navbar-logo {
-  font-size: 24px;
+  font-size: clamp(10px, 5vw, 22px); /* Scales between 10px and 24px */
   font-weight: bold;
 }
 .navbar ul {
