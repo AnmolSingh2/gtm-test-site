@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial, sans-serif;
   color: #fff;
@@ -79,6 +82,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
+ margin-top: 20px;
 }
 
 /* Black Button */
@@ -115,7 +119,8 @@ body {
 /* Services Section */
 .services {
   background: rgba(0, 0, 0, 0.6);
-  padding: 60px 20px;
+  padding: 30px 60px;
+  text-align: center;
 }
 .services h2 {
   font-size: 2em;
@@ -125,7 +130,7 @@ body {
   margin: 20px auto;
   max-width: 400px;
   background: #111;
-  padding: 20px;
+  padding: 30px;
   border-radius: 5px;
   text-align: left;
 }
@@ -139,39 +144,34 @@ body {
 
 /* Why Choose Us */
 .why-choose-us {
-  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 60px;
   text-align: center;
 }
 .why-choose-us h2 {
   font-size: 2em;
-  margin-bottom: 20px;
-}
-.why-choose-us p {
-  font-size: 1.1em;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
   margin-bottom: 30px;
 }
+.why-choose-us p {
+    line-height: 1.5;
+}
+
 .feature-box {
+  margin: 20px auto;
+  max-width: 400px;
   background: #111;
-  padding: 20px;
+  padding: 30px;
   border-radius: 5px;
-  max-width: 250px;
   text-align: left;
 }
-.feature-box h4 {
+
+.feature-box h3 {
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .feature-box p {
   line-height: 1.5;
+margin-bottom: 10px;
 }
 
 /* Footer */
@@ -307,4 +307,3 @@ footer a {
 footer a:hover {
     color: white; /* White on hover */
 }
-
